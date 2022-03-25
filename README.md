@@ -3,6 +3,11 @@
 This app is created to test and learn the principals of Web-Api calls with React JS.
 For this project i'm gonna use the Weather-api from https://www.weatherapi.com/
 
+# steps to run locally:
+- Clone code.
+- Run 'npm i' in terminal to install dependecies.
+- Run 'npm start' to start app on localhost:3000
+
 # my goals for this project are:
 
 - Make a simple web app where you can view the weather from any place you want.
