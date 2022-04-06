@@ -1,8 +1,8 @@
 import "./App.css";
-import ApiCall from "./ApiCall";
+import WeatherDisplay from "./WeatherDisplay";
 
 function App() {
-  return ApiCall();
+  return WeatherDisplay();
 }
 
 export default App;
