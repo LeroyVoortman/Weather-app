@@ -23,3 +23,4 @@ So concluding, i want to use my knowledge about React, while simultaneously lear
 - Created an account for the Api and got the key
 - Written basic code to fetch api data and display certain data.
 - Base code commited to GitHub
+- Separated the apiCall and the render
