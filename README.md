@@ -24,3 +24,4 @@ So concluding, i want to use my knowledge about React, while simultaneously lear
 - Written basic code to fetch api data and display certain data.
 - Base code commited to GitHub
 - Separated the apiCall and the render
+- Displayed data in table
