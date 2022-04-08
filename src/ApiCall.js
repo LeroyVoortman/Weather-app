@@ -13,7 +13,6 @@ export function ApiCall() {
       .then(
         (response) => {
           setData(response);
-          console.log(response["location"].country);
         },
 
         (error) => {
