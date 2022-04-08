@@ -1,12 +1,11 @@
-import React from "react";
+import * as React from "react";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
-import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
-
+import { StyledTableRow, StyledTableCell } from "./Components/Theme";
 function WeatherDisplay(data, error, isLoaded) {
   console.log(data);
   if (!error === null) {
@@ -14,11 +13,11 @@ function WeatherDisplay(data, error, isLoaded) {
   } else if (data == null) {
     return <div>Loading...</div>;
   } else {
-    return <BasicTable {...data} />;
+    return <CustomizedTables {...data} />;
   }
 }
 
-function BasicTable(data) {
+function CustomizedTables(data) {
   function createData(name, value, data) {
     return { name, value, data };
   }
@@ -39,37 +38,30 @@ function BasicTable(data) {
     createData("precipitation:", `${data.current?.precip_mm} mm`),
     createData("Cloud coverage:", `${data.current?.cloud}%`),
   ];
-
   return (
     <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
+      <Table sx={{ minWidth: 700 }} aria-label="customized table">
         <TableHead>
           <TableRow>
-            <TableCell>
+            <StyledTableCell align="center">
               Current weather data from {data.location?.name}
-            </TableCell>
-            <TableCell align="left"></TableCell>
+            </StyledTableCell>
+            <StyledTableCell align="center"></StyledTableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {rows.map((row) => (
-            <TableRow
-              key={row.name}
-              sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-            >
-              <TableCell component="th" scope="row">
+            <StyledTableRow key={row.name}>
+              <StyledTableCell align="center" component="th" scope="row">
                 {row.name}
-              </TableCell>
-              <TableCell align="left">{row.value}</TableCell>
-            </TableRow>
+              </StyledTableCell>
+              <StyledTableCell align="">{row.value}</StyledTableCell>
+            </StyledTableRow>
           ))}
         </TableBody>
       </Table>
     </TableContainer>
   );
 }
-
-// Country, name, region , localtime
-// last_updated , temp_c , condition:text , condition:icon , precip_mm
 
 export default WeatherDisplay;
