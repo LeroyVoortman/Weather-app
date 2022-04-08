@@ -22,12 +22,6 @@ export function ApiCall() {
         }
       );
   }, []);
-  // if (error) {
-  //   return <div>Error: {error.message}</div>;
-  // } else if (!data) {
-  //   return <div>Loading...</div>;
-  // } else {
-  //   return <div>{data["location"].country}</div>;
-  // }
-  return <WeatherDisplay error={error} data={data} isLoaded={isLoaded} />;
+
+  return <WeatherDisplay {...error} {...data} {...isLoaded} />;
 }
