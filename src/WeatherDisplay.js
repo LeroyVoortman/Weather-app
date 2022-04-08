@@ -1,15 +1,14 @@
 import React from "react";
-import { useDataContext } from "./DataHook";
+import ApiCall from "./ApiCall";
 
-function WeatherDisplay() {
-  const data = useDataContext();
-  const error = useDataContext();
-  if (error) {
+function WeatherDisplay(data, error, isLoaded) {
+  console.log(data);
+  if (!error === null) {
     return <div>Error: {error.message}</div>;
-  } else if (!data) {
+  } else if (data?.data == null) {
     return <div>Loading...</div>;
   } else {
-    return <div>{data["location"].country}</div>;
+    return <div>{data?.data["location"]?.country}</div>;
   }
 }
 
