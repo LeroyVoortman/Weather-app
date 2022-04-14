@@ -6,7 +6,7 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { StyledTableRow, StyledTableCell } from "./Components/Theme";
-import LocationInput from "./Components/LocationInput";
+
 function WeatherDisplay(data, error, isLoaded) {
   if (!error === null) {
     return <div>Error: {error.message}</div>;
@@ -40,12 +40,12 @@ function CustomizedTables(data) {
   ];
   return (
     <TableContainer component={Paper}>
-      <LocationInput />
+      {/* <LocationInput /> */}
       <Table sx={{ minWidth: 700 }} aria-label="customized table">
         <TableHead>
           <TableRow>
             <StyledTableCell align="center">
-              Current weather data from {data.location?.name}
+              Current weather data from: {data.location?.name}
             </StyledTableCell>
             <StyledTableCell align="center"></StyledTableCell>
           </TableRow>
