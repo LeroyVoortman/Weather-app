@@ -1,7 +1,6 @@
 import { TextField } from "@mui/material";
 
 export function LocationInput(props) {
-  //console.log(location);
   return (
     <TextField
       fullWidth
