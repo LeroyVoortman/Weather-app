@@ -25,4 +25,5 @@ So concluding, i want to use my knowledge about React, while simultaneously lear
 - Base code commited to GitHub.
 - Separated the apiCall and the render.
 - Displayed data in table.
-- Created a input function that's used to select desired location to vieuw the weather data.
+- Created a input function that's used to select desired location to view the weather data.
+- When the app opens there will now be a input field that will ask for a location to view the weather data.
