@@ -20,8 +20,9 @@ So concluding, i want to use my knowledge about React, while simultaneously lear
 
 # accomplishments
 
-- Created an account for the Api and got the key
+- Created an account for the Api and got the key.
 - Written basic code to fetch api data and display certain data.
-- Base code commited to GitHub
-- Separated the apiCall and the render
-- Displayed data in table
+- Base code commited to GitHub.
+- Separated the apiCall and the render.
+- Displayed data in table.
+- Created a input function that's used to select desired location to vieuw the weather data.
