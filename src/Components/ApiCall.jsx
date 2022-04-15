@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { LocationInput } from "./Components/LocationInput";
+import AskLocation from "./AskLocation";
+import { LocationInput } from "./LocationInput";
 import WeatherDisplay from "./WeatherDisplay";
 
 export function ApiCall() {
@@ -25,10 +26,14 @@ export function ApiCall() {
       );
   }, [location]);
 
-  return (
-    <>
-      <WeatherDisplay {...error} {...data} {...isLoaded} />
-      <LocationInput sendToParent={setLocation} />
-    </>
-  );
+  if (location === "") {
+    return <AskLocation toChild={location} sendToParent={setLocation} />;
+  } else {
+    return (
+      <>
+        <WeatherDisplay {...error} {...data} {...isLoaded} />
+        <LocationInput toChild={location} sendToParent={setLocation} />
+      </>
+    );
+  }
 }

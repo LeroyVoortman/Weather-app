@@ -10,8 +10,10 @@ export function LocationInput(props) {
       onKeyPress={(e) => {
         if (e.key === "Enter") {
           props.sendToParent(e.target.value);
+          e.target.value = "";
         }
       }}
     />
   );
 }
+//}

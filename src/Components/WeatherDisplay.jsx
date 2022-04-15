@@ -5,7 +5,7 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
-import { StyledTableRow, StyledTableCell } from "./Components/Theme";
+import { StyledTableRow, StyledTableCell } from "./Theme";
 
 function WeatherDisplay(data, error, isLoaded) {
   if (!error === null) {
@@ -40,7 +40,6 @@ function CustomizedTables(data) {
   ];
   return (
     <TableContainer component={Paper}>
-      {/* <LocationInput /> */}
       <Table sx={{ minWidth: 700 }} aria-label="customized table">
         <TableHead>
           <TableRow>
